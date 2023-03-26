@@ -47,4 +47,4 @@ jobs:
         # "HOST": ${{ secrets.DB_HOST }}
         # "PORT": ${{ secrets.DB_PORT }}
       run: |
-        python manage.py test
+        coverage run manage.py test && coverage report --fail-under=65
